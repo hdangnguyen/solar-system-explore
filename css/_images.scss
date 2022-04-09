@@ -1,0 +1,41 @@
+@mixin planet-size($name, $bg-repeat: no-repeat) {
+  $url: "../assets/#{$name}.png";
+  background-image: url($url);
+  background-repeat: $bg-repeat;
+}
+body {
+  @include planet-size(Universe);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#sun {
+  @include planet-size(Sun);
+}
+#mercury .planet {
+  @include planet-size(Mercury);
+}
+#venus .planet {
+  @include planet-size(Venus);
+}
+
+#saturn .planet {
+  @include planet-size(Saturn);
+}
+#earth .planet {
+  @include planet-size(Earth);
+}
+.moon {
+  background-color: white;
+}
+#mars .planet {
+  @include planet-size(Mars);
+}
+#uranus .planet {
+  @include planet-size(Uranus);
+}
+#jupiter .planet {
+  @include planet-size(Jupiter);
+}
+#neptune .planet {
+  @include planet-size(Neptune);
+}

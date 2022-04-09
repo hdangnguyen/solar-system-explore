@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Light.ttf) format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Black.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Ultrabold.otf);
+  font-weight: 800;
+}
+* {
+  font-family: "MonumentExtended", sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  padding: 30px 100px;
+}
+#container .navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+#container .navbar a {
+  text-decoration: none;
+  margin-right: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  z-index: 10;
+}
+#container .textarea {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  margin-top: 100px;
+}
+#container .textarea h3 {
+  font-size: 24px;
+}
+#container .textarea__heading {
+  color: white;
+  font-weight: 800;
+  font-size: 56px;
+}
+#container .textarea__description {
+  width: 70%;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 150%;
+}
+#container .btn-actions {
+  margin-top: 30px;
+}
+#container .btn-actions a {
+  background-color: rgb(223, 145, 0);
+  width: 100%;
+  height: 100%;
+  padding: 15px 30px;
+  margin-top: 50px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 10;
+}
+#container .btn-actions a:hover {
+  background-color: rgb(167, 108, 0);
+}
+
+.img {
+  position: absolute;
+  width: auto;
+  z-index: 1;
+}
+
+.earth {
+  height: 60%;
+  bottom: -15%;
+  right: -5%;
+  animation: circle1 30s linear infinite;
+}
+
+.mars {
+  height: 10%;
+  bottom: 55%;
+  right: 20%;
+  animation: circle2 30s linear infinite;
+}
+
+.jupiter {
+  height: 30%;
+  bottom: 55%;
+  right: -5%;
+  animation: circle3 40s linear infinite;
+}
+
+.uranus {
+  height: 8%;
+  bottom: 25%;
+  right: 50%;
+  animation: circle4 50s linear infinite;
+}
+
+.neptune {
+  height: 8%;
+  bottom: 40%;
+  right: 40%;
+  animation: circle5 70s linear infinite;
+}
+
+.saturn {
+  height: 15%;
+  bottom: 60%;
+  right: 30%;
+  animation: circle6 30s linear infinite;
+}
+
+.stars {
+  height: 100%;
+  bottom: 0%;
+  right: 0%;
+  animation: circle7 50s linear infinite;
+}
+
+@keyframes circle1 {
+  from {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-30px) rotate(-360deg);
+  }
+}
+@keyframes circle2 {
+  from {
+    transform: rotate(360deg) translate(-30px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+}
+@keyframes circle3 {
+  from {
+    transform: rotate(360deg) translate(-30px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+}
+@keyframes circle4 {
+  from {
+    transform: rotate(360deg) translate(-60px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-60px) rotate(0deg);
+  }
+}
+@keyframes circle5 {
+  from {
+    transform: rotate(360deg) translate(-80px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-80px) rotate(0deg);
+  }
+}
+@keyframes circle6 {
+  from {
+    transform: rotate(-360deg) translate(-60px) rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-60px) rotate(0deg);
+  }
+}
+@keyframes circle7 {
+  from {
+    transform: rotate(360deg) translate(-50px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-50px) rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=landingpage.css.map */

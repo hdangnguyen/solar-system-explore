@@ -1,0 +1,238 @@
+$speedRatio: 12s;
+
+$s-mercury: 0.2408467;
+$s-venus: 0.61519726;
+$s-earth: 1.0000174;
+$s-moon: 0.074803559;
+$s-mars: 1.8808476;
+$s-jupiter: 11.862615;
+$s-saturn: 29.447498;
+$s-uranus: 84.016846;
+$s-neptune: 164.79132;
+
+@function sideralyear($sidyear) {
+  @return ($sidyear) * $speedRatio;
+}
+
+#mercury .pos,
+#mercury .planet,
+#mercury.orbit {
+  animation-duration: sideralyear($s-mercury);
+}
+
+#venus .pos,
+#venus .planet,
+#venus.orbit {
+  animation-duration: sideralyear($s-venus);
+}
+
+#earth .pos,
+#earth .planet,
+#earth.orbit {
+  animation-duration: sideralyear($s-earth);
+}
+
+#earth .orbit .pos,
+#earth .orbit {
+  animation-duration: sideralyear($s-moon);
+}
+
+#mars .pos,
+#mars .planet,
+#mars.orbit {
+  animation-duration: sideralyear($s-mars);
+}
+
+#jupiter .pos,
+#jupiter .planet,
+#jupiter.orbit {
+  animation-duration: sideralyear($s-jupiter);
+}
+
+#saturn .pos,
+#saturn .planet,
+#saturn.orbit,
+#saturn .ring {
+  animation-duration: sideralyear($s-saturn);
+}
+
+#uranus .pos,
+#uranus .planet,
+#uranus.orbit {
+  animation-duration: sideralyear($s-uranus);
+}
+
+#neptune .pos,
+#neptune .planet,
+#neptune.orbit {
+  animation-duration: sideralyear($s-neptune);
+}
+
+#sun {
+  font-size: 24em;
+}
+#mercury .planet {
+  font-size: 1.3em;
+}
+#venus .planet {
+  font-size: 2.72em;
+}
+#earth .planet {
+  font-size: 3em;
+}
+#earth .moon .planet {
+  font-size: 0.8em;
+}
+#mars .planet {
+  font-size: 1.8em;
+}
+#jupiter .planet {
+  font-size: 9.5em;
+}
+#saturn .planet {
+  font-size: 8.5em;
+}
+#uranus .planet {
+  font-size: 5em;
+}
+#neptune .planet {
+  font-size: 5.1em;
+}
+
+@function ratio($data, $ratio) {
+  @return ($data * 2) * $ratio;
+}
+
+@mixin stretchedOrbit($distance) {
+  width: $distance;
+  height: $distance;
+  margin-top: calc(-#{$distance}/ 2);
+  margin-left: calc(-#{$distance}/ 2);
+}
+
+#mercury.orbit {
+  @include stretchedOrbit(32em);
+}
+#venus.orbit {
+  @include stretchedOrbit(40em);
+}
+#earth.orbit {
+  @include stretchedOrbit(56em);
+}
+#earth .orbit /* Moon */ {
+  @include stretchedOrbit(6em);
+}
+#mars.orbit {
+  @include stretchedOrbit(72em);
+}
+#jupiter.orbit {
+  @include stretchedOrbit(105em);
+}
+#saturn.orbit {
+  @include stretchedOrbit(140em);
+}
+#uranus.orbit {
+  @include stretchedOrbit(166em);
+}
+#neptune.orbit {
+  @include stretchedOrbit(190em);
+}
+
+.set-speed dl.infos dd span:after {
+  content: "Orbit Velocity";
+}
+
+.set-speed #sun dl.infos dd:after {
+  content: "0 km/h";
+}
+.set-speed #mercury dl.infos dd:after {
+  content: "170,503 km/h";
+}
+.set-speed #venus dl.infos dd:after {
+  content: "126,074 km/h";
+}
+.set-speed #earth dl.infos dd:after {
+  content: "107,218 km/h";
+}
+.set-speed #mars dl.infos dd:after {
+  content: "86,677 km/h";
+}
+.set-speed #jupiter dl.infos dd:after {
+  content: "47,002 km/h";
+}
+.set-speed #saturn dl.infos dd:after {
+  content: "34,701 km/h";
+}
+.set-speed #uranus dl.infos dd:after {
+  content: "24,477 km/h";
+}
+.set-speed #neptune dl.infos dd:after {
+  content: "19,566 km/h";
+}
+
+.set-size dl.infos dd span:after {
+  content: "Equatorial Circumference";
+}
+
+.set-size #sun dl.infos dd:after {
+  content: "4,370,005 km";
+}
+.set-size #mercury dl.infos dd:after {
+  content: "15,329 km";
+}
+.set-size #venus dl.infos dd:after {
+  content: "38,024 km";
+}
+.set-size #earth dl.infos dd:after {
+  content: "40,030 km";
+}
+.set-size #mars dl.infos dd:after {
+  content: "21,296 km";
+}
+.set-size #jupiter dl.infos dd:after {
+  content: "439,263 km";
+}
+.set-size #saturn dl.infos dd:after {
+  content: "365,882 km";
+}
+.set-size #uranus dl.infos dd:after {
+  content: "159,354 km";
+}
+.set-size #neptune dl.infos dd:after {
+  content: "154,704 km";
+}
+
+.set-distance dl.infos dd span:after {
+  content: "From Sun";
+}
+.set-distance #sun dl.infos dd span:after {
+  content: "From Earth";
+}
+
+.set-distance #sun dl.infos dd:after {
+  content: "149,598,262 km";
+}
+.set-distance #mercury dl.infos dd:after {
+  content: "57,909,227 km";
+}
+.set-distance #venus dl.infos dd:after {
+  content: "108,209,475 km";
+}
+.set-distance #earth dl.infos dd:after {
+  content: "149,598,262 km";
+}
+.set-distance #mars dl.infos dd:after {
+  content: "227,943,824 km";
+}
+.set-distance #jupiter dl.infos dd:after {
+  content: "778,340,821 km";
+}
+.set-distance #saturn dl.infos dd:after {
+  content: "1,426,666,422 km";
+}
+.set-distance #uranus dl.infos dd:after {
+  content: "2,870,658,186 km";
+}
+.set-distance #neptune dl.infos dd:after {
+  content: "4,498,396,441 km";
+}
