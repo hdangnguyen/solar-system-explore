@@ -25,7 +25,6 @@
 }
 
 body {
-  overflow: hidden;
   background-color: black;
   width: 100vw;
   height: 100vh;
@@ -35,17 +34,26 @@ body {
   padding: 30px 100px;
 }
 #container .navbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 50px;
-  margin-right: 20px;
+  position: fixed;
+  left: 50%;
+  top: 7%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 #container .navbar a {
   text-decoration: none;
   margin-right: 40px;
-  font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   z-index: 10;
+  transition: all 0.5s;
+  opacity: 0.7;
+}
+#container .navbar a:hover {
+  border-bottom: 2px solid rgb(223, 145, 0);
+  padding-bottom: 3px;
+  color: rgb(223, 145, 0);
+  opacity: 1;
 }
 #container .textarea {
   width: 40%;
@@ -66,6 +74,7 @@ body {
   font-weight: 200;
   font-size: 12px;
   line-height: 150%;
+  opacity: 0.8;
 }
 #container .btn-actions {
   margin-top: 30px;
@@ -133,9 +142,9 @@ body {
 }
 
 .stars {
-  height: 100%;
+  height: 110%;
   bottom: 0%;
-  right: 0%;
+  right: -10%;
   animation: circle7 50s linear infinite;
 }
 
@@ -194,6 +203,19 @@ body {
   to {
     transform: rotate(0deg) translate(-50px) rotate(0deg);
   }
+}
+.left-to-right {
+  transform: translateX(-200%);
+  transition: 0.8s;
+}
+
+.left-to-right.start {
+  transform: translateX(0%);
+}
+
+.top-to-bottom {
+  transform: translateY(-200%);
+  transition: 0.8s;
 }
 
 /*# sourceMappingURL=landingpage.css.map */
