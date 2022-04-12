@@ -7,6 +7,9 @@ body {
   @include planet-size(Universe);
   background-size: cover;
   background-attachment: fixed;
+  #galaxy {
+    background-color: rgba(0, 0, 0, 0.581);
+  }
 }
 #sun {
   @include planet-size(Sun);

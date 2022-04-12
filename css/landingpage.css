@@ -28,6 +28,7 @@ body {
   background-color: black;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 #container {
@@ -36,10 +37,12 @@ body {
 #container .navbar {
   position: fixed;
   left: 50%;
-  top: 7%;
-  -ms-transform: translate(-50%, -50%);
+  top: 8%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  /* Will not center vertically and won't work in IE6/7. */
   z-index: 10;
+  animation: toptobottom 0.7s ease-in-out;
 }
 #container .navbar a {
   text-decoration: none;
@@ -63,11 +66,13 @@ body {
 }
 #container .textarea h3 {
   font-size: 24px;
+  animation: lefttoright 0.7s ease-in-out;
 }
 #container .textarea__heading {
   color: white;
   font-weight: 800;
   font-size: 56px;
+  animation: lefttoright 0.8s ease-in-out;
 }
 #container .textarea__description {
   width: 70%;
@@ -75,9 +80,11 @@ body {
   font-size: 12px;
   line-height: 150%;
   opacity: 0.8;
+  animation: lefttoright 1s ease-in-out;
 }
 #container .btn-actions {
   margin-top: 30px;
+  animation: lefttoright 1s ease-in-out;
 }
 #container .btn-actions a {
   background-color: rgb(223, 145, 0);
@@ -216,6 +223,29 @@ body {
 .top-to-bottom {
   transform: translateY(-200%);
   transition: 0.8s;
+}
+
+@keyframes lefttoright {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes toptobottom {
+  from {
+    left: 50%;
+    top: -8%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  to {
+    left: 50%;
+    top: 8%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*# sourceMappingURL=landingpage.css.map */

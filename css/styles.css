@@ -1,6 +1,6 @@
 body {
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 300;
   background-color: #08090a;
 }
@@ -292,6 +292,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+body #galaxy {
+  background-color: rgba(0, 0, 0, 0.581);
 }
 
 #sun {
@@ -624,6 +627,26 @@ body {
   content: "4,498,396,441 km";
 }
 
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Light.ttf) format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Black.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MonumentExtended";
+  src: url(../fonts/MonumentExtended-Ultrabold.otf);
+  font-weight: 800;
+}
 h1 {
   width: 100%;
   font-weight: 600;
