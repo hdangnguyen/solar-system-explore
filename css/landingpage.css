@@ -29,7 +29,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 #container {
@@ -60,10 +60,10 @@ body {
   opacity: 1;
 }
 #container .textarea {
-  width: 40%;
+  width: 50%;
   height: 100%;
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 #container .textarea h3 {
   font-size: 2em;
@@ -78,7 +78,7 @@ body {
 #container .textarea__description {
   width: 70%;
   font-weight: 200;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 150%;
   opacity: 0.8;
   animation: lefttoright 1s ease-in-out;
@@ -96,6 +96,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   z-index: 10;
+  font-size: 1.3em;
 }
 #container .btn-actions a:hover {
   background-color: rgb(167, 108, 0);

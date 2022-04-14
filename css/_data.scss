@@ -67,36 +67,35 @@ $s-neptune: 164.79132;
 #neptune.orbit {
   animation-duration: sideralyear($s-neptune);
 }
-
 #sun {
   font-size: 24em;
 }
 #mercury .planet {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 #venus .planet {
-  font-size: 2.72em;
+  font-size: 3.72em;
 }
 #earth .planet {
-  font-size: 3em;
+  font-size: 3.92em;
 }
-#earth .moon .planet {
-  font-size: 0.8em;
+#earth .moon {
+  font-size: 1.2em;
 }
 #mars .planet {
-  font-size: 1.8em;
+  font-size: 2.9em;
 }
 #jupiter .planet {
-  font-size: 9.5em;
+  font-size: 12em;
 }
 #saturn .planet {
-  font-size: 8.5em;
+  font-size: 10.8em;
 }
 #uranus .planet {
-  font-size: 5em;
+  font-size: 4.68em;
 }
 #neptune .planet {
-  font-size: 5.1em;
+  font-size: 4.9em;
 }
 
 @function ratio($data, $ratio) {
@@ -110,32 +109,32 @@ $s-neptune: 164.79132;
   margin-left: calc(-#{$distance}/ 2);
 }
 
-#mercury.orbit {
+.scale-stretched #mercury.orbit {
   @include stretchedOrbit(32em);
 }
-#venus.orbit {
+.scale-stretched #venus.orbit {
   @include stretchedOrbit(40em);
 }
-#earth.orbit {
+.scale-stretched #earth.orbit {
   @include stretchedOrbit(56em);
 }
-#earth .orbit /* Moon */ {
+.scale-stretched #earth .orbit /* Moon */ {
   @include stretchedOrbit(6em);
 }
-#mars.orbit {
+.scale-stretched #mars.orbit {
   @include stretchedOrbit(72em);
 }
-#jupiter.orbit {
-  @include stretchedOrbit(105em);
+.scale-stretched #jupiter.orbit {
+  @include stretchedOrbit(100em);
 }
-#saturn.orbit {
-  @include stretchedOrbit(140em);
+.scale-stretched #saturn.orbit {
+  @include stretchedOrbit(150em);
 }
-#uranus.orbit {
-  @include stretchedOrbit(166em);
+.scale-stretched #uranus.orbit {
+  @include stretchedOrbit(186em);
 }
-#neptune.orbit {
-  @include stretchedOrbit(190em);
+.scale-stretched #neptune.orbit {
+  @include stretchedOrbit(210em);
 }
 
 .set-speed dl.infos dd span:after {

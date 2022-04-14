@@ -14,59 +14,59 @@ $s-neptune: 164.79132;
   @return ($sidyear) * $speedRatio;
 }
 
-#mercury .pos,
-#mercury .planet,
-#mercury.orbit {
-  animation-duration: sideralyear($s-mercury);
-}
+// #mercury .pos,
+// #mercury .planet,
+// #mercury.orbit {
+//   animation-duration: sideralyear($s-mercury);
+// }
 
-#venus .pos,
-#venus .planet,
-#venus.orbit {
-  animation-duration: sideralyear($s-venus);
-}
+// #venus .pos,
+// #venus .planet,
+// #venus.orbit {
+//   animation-duration: sideralyear($s-venus);
+// }
 
-#earth .pos,
-#earth .planet,
-#earth.orbit {
-  animation-duration: sideralyear($s-earth);
-}
+// #earth .pos,
+// #earth .planet,
+// #earth.orbit {
+//   animation-duration: sideralyear($s-earth);
+// }
 
-#earth .orbit .pos,
-#earth .orbit {
-  animation-duration: sideralyear($s-moon);
-}
+// #earth .orbit .pos,
+// #earth .orbit {
+//   animation-duration: sideralyear($s-moon);
+// }
 
-#mars .pos,
-#mars .planet,
-#mars.orbit {
-  animation-duration: sideralyear($s-mars);
-}
+// #mars .pos,
+// #mars .planet,
+// #mars.orbit {
+//   animation-duration: sideralyear($s-mars);
+// }
 
-#jupiter .pos,
-#jupiter .planet,
-#jupiter.orbit {
-  animation-duration: sideralyear($s-jupiter);
-}
+// #jupiter .pos,
+// #jupiter .planet,
+// #jupiter.orbit {
+//   animation-duration: sideralyear($s-jupiter);
+// }
 
-#saturn .pos,
-#saturn .planet,
-#saturn.orbit,
-#saturn .ring {
-  animation-duration: sideralyear($s-saturn);
-}
+// #saturn .pos,
+// #saturn .planet,
+// #saturn.orbit,
+// #saturn .ring {
+//   animation-duration: sideralyear($s-saturn);
+// }
 
-#uranus .pos,
-#uranus .planet,
-#uranus.orbit {
-  animation-duration: sideralyear($s-uranus);
-}
+// #uranus .pos,
+// #uranus .planet,
+// #uranus.orbit {
+//   animation-duration: sideralyear($s-uranus);
+// }
 
-#neptune .pos,
-#neptune .planet,
-#neptune.orbit {
-  animation-duration: sideralyear($s-neptune);
-}
+// #neptune .pos,
+// #neptune .planet,
+// #neptune.orbit {
+//   animation-duration: sideralyear($s-neptune);
+// }
 
 #sun {
   font-size: 20em;

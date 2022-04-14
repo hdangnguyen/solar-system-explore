@@ -36,16 +36,6 @@ dl.infos dt {
   text-shadow: 1px 1px 2px black;
 }
 
-dl.infos dd:after {
-  position: absolute;
-  left: 50px;
-  bottom: 30px;
-  width: 300px;
-  color: #fff;
-  font-size: 22px;
-  text-shadow: 1px 1px 2px black;
-}
-
 dl.infos dd span:after {
   position: absolute;
   left: 50px;

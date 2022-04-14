@@ -1,20 +1,18 @@
-@mixin planet-size($name, $bg-repeat: no-repeat) {
-  $url: "../assets/#{$name}.png";
+@mixin planet-size($name, $bg-repeat: repeat-x) {
+  $url: "../assets/#{$name}.jpeg";
   background-image: url($url);
   background-repeat: $bg-repeat;
+  background-size: cover;
 }
 body {
   @include planet-size(Universe);
-  background-size: cover;
   background-attachment: fixed;
-  #galaxy {
-    background-color: rgba(0, 0, 0, 0.581);
-  }
 }
 #sun {
   @include planet-size(Sun);
+  box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
 }
-#mercury .planet {
+#mercury {
   @include planet-size(Mercury);
 }
 #venus .planet {
@@ -41,4 +39,18 @@ body {
 }
 #neptune .planet {
   @include planet-size(Neptune);
+}
+@keyframes spinAround {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2048px 0;
+  }
+}
+#sun {
+  animation: spinAround 50s linear infinite;
+}
+#mercury {
+  animation: spinAround 50s linear infinite;
 }

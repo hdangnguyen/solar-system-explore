@@ -1,5 +1,5 @@
 body {
-  font-size: 13px;
+  font-size: 11px;
   font-family: "Helvetica", sans-serif;
   font-weight: 300;
   background-color: #08090a;
@@ -15,34 +15,43 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-#galaxy {
+#universe #galaxy {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
-#solar-system {
+#universe #solar-system {
   position: absolute;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
 }
-
-.orbit {
+#universe #solar-system .orbit {
   position: absolute;
   top: 50%;
   left: 50%;
   border: 2px solid rgba(255, 255, 255, 0.096);
   border-radius: 50%;
   transform-style: preserve-3d;
-  animation-name: orbit;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: orbit linear infinite;
 }
-
-.orbit .orbit {
-  animation-name: suborbit;
+#universe #solar-system .orbit .pos {
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: invert infinite linear;
+}
+#universe #solar-system #sun,
+#universe #solar-system .planet,
+#universe #solar-system #earth .moon {
+  position: absolute;
+  width: 1em;
+  top: 50%;
+  left: 50%;
+  height: 1em;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
 }
 
 .pos {
@@ -70,12 +79,6 @@ body {
   margin-left: -0.5em;
   border-radius: 50%;
   transform-style: preserve-3d;
-}
-
-#sun {
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0 100px rgba(255, 160, 60, 0.5);
 }
 
 .planet {
@@ -288,38 +291,41 @@ body {
 }
 
 body {
-  background-image: url("../assets/Universe.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Universe.jpeg");
+  background-repeat: repeat-x;
   background-size: cover;
   background-attachment: fixed;
 }
-body #galaxy {
-  background-color: rgba(0, 0, 0, 0.581);
-}
 
 #sun {
-  background-image: url("../assets/Sun.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Sun.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
 }
 
-#mercury .planet {
-  background-image: url("../assets/Mercury.png");
-  background-repeat: no-repeat;
+#mercury {
+  background-image: url("../assets/Mercury.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #venus .planet {
-  background-image: url("../assets/Venus.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Venus.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #saturn .planet {
-  background-image: url("../assets/Saturn.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Saturn.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #earth .planet {
-  background-image: url("../assets/Earth.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Earth.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 .moon {
@@ -327,23 +333,43 @@ body #galaxy {
 }
 
 #mars .planet {
-  background-image: url("../assets/Mars.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Mars.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #uranus .planet {
-  background-image: url("../assets/Uranus.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Uranus.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #jupiter .planet {
-  background-image: url("../assets/Jupiter.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Jupiter.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #neptune .planet {
-  background-image: url("../assets/Neptune.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Neptune.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+@keyframes spinAround {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2048px 0;
+  }
+}
+#sun {
+  animation: spinAround 50s linear infinite;
+}
+
+#mercury {
+  animation: spinAround 50s linear infinite;
 }
 
 #mercury .pos,
@@ -405,102 +431,102 @@ body #galaxy {
 }
 
 #mercury .planet {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 #venus .planet {
-  font-size: 2.72em;
+  font-size: 3.72em;
 }
 
 #earth .planet {
-  font-size: 3em;
+  font-size: 3.92em;
 }
 
-#earth .moon .planet {
-  font-size: 0.8em;
+#earth .moon {
+  font-size: 1.2em;
 }
 
 #mars .planet {
-  font-size: 1.8em;
+  font-size: 2.9em;
 }
 
 #jupiter .planet {
-  font-size: 9.5em;
+  font-size: 12em;
 }
 
 #saturn .planet {
-  font-size: 8.5em;
+  font-size: 10.8em;
 }
 
 #uranus .planet {
-  font-size: 5em;
+  font-size: 4.68em;
 }
 
 #neptune .planet {
-  font-size: 5.1em;
+  font-size: 4.9em;
 }
 
-#mercury.orbit {
+.scale-stretched #mercury.orbit {
   width: 32em;
   height: 32em;
   margin-top: calc(-32em/ 2);
   margin-left: calc(-32em/ 2);
 }
 
-#venus.orbit {
+.scale-stretched #venus.orbit {
   width: 40em;
   height: 40em;
   margin-top: calc(-40em/ 2);
   margin-left: calc(-40em/ 2);
 }
 
-#earth.orbit {
+.scale-stretched #earth.orbit {
   width: 56em;
   height: 56em;
   margin-top: calc(-56em/ 2);
   margin-left: calc(-56em/ 2);
 }
 
-#earth .orbit {
+.scale-stretched #earth .orbit {
   width: 6em;
   height: 6em;
   margin-top: calc(-6em/ 2);
   margin-left: calc(-6em/ 2);
 }
 
-#mars.orbit {
+.scale-stretched #mars.orbit {
   width: 72em;
   height: 72em;
   margin-top: calc(-72em/ 2);
   margin-left: calc(-72em/ 2);
 }
 
-#jupiter.orbit {
-  width: 105em;
-  height: 105em;
-  margin-top: calc(-105em/ 2);
-  margin-left: calc(-105em/ 2);
+.scale-stretched #jupiter.orbit {
+  width: 100em;
+  height: 100em;
+  margin-top: calc(-100em/ 2);
+  margin-left: calc(-100em/ 2);
 }
 
-#saturn.orbit {
-  width: 140em;
-  height: 140em;
-  margin-top: calc(-140em/ 2);
-  margin-left: calc(-140em/ 2);
+.scale-stretched #saturn.orbit {
+  width: 150em;
+  height: 150em;
+  margin-top: calc(-150em/ 2);
+  margin-left: calc(-150em/ 2);
 }
 
-#uranus.orbit {
-  width: 166em;
-  height: 166em;
-  margin-top: calc(-166em/ 2);
-  margin-left: calc(-166em/ 2);
+.scale-stretched #uranus.orbit {
+  width: 186em;
+  height: 186em;
+  margin-top: calc(-186em/ 2);
+  margin-left: calc(-186em/ 2);
 }
 
-#neptune.orbit {
-  width: 190em;
-  height: 190em;
-  margin-top: calc(-190em/ 2);
-  margin-left: calc(-190em/ 2);
+.scale-stretched #neptune.orbit {
+  width: 210em;
+  height: 210em;
+  margin-top: calc(-210em/ 2);
+  margin-left: calc(-210em/ 2);
 }
 
 .set-speed dl.infos dd span:after {
@@ -694,16 +720,6 @@ dl.infos dt {
   text-shadow: 1px 1px 2px black;
 }
 
-dl.infos dd:after {
-  position: absolute;
-  left: 50px;
-  bottom: 30px;
-  width: 300px;
-  color: #fff;
-  font-size: 22px;
-  text-shadow: 1px 1px 2px black;
-}
-
 dl.infos dd span:after {
   position: absolute;
   left: 50px;
@@ -766,27 +782,27 @@ dl.infos dd span:after {
 
 @keyframes shadow-mercury {
   0% {
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7);
   }
   25% {
-    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: inset 13px -5px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 13px -5px 4px rgba(0, 0, 0, 0.7);
   }
   50.01% {
-    box-shadow: inset -13px -5px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -13px -5px 4px rgba(0, 0, 0, 0.7);
   }
   75% {
-    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7);
   }
 }
 .scaled.view-2D #mercury .planet,
 .scaled.view-3D #mercury .planet {
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
 }
 
 #venus .pos {
@@ -800,27 +816,27 @@ dl.infos dd span:after {
 
 @keyframes shadow-venus {
   0% {
-    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.7);
   }
   25% {
-    box-shadow: inset 22px -20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 22px -20px 10px rgba(0, 0, 0, 0.7);
   }
-  25.5% {
-    box-shadow: inset -22px -20px 10px rgba(0, 0, 0, 0.5);
+  25.7% {
+    box-shadow: inset -22px -20px 10px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
   }
   75% {
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.7);
   }
 }
 .scaled.view-2D #venus .planet,
 .scaled.view-3D #venus .planet {
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
 }
 
 #earth .pos {
@@ -834,27 +850,27 @@ dl.infos dd span:after {
 
 @keyframes shadow-earth {
   0% {
-    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
   }
   25% {
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.7);
   }
   75% {
-    box-shadow: inset 24px -20px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 24px -20px 15px rgba(0, 0, 0, 0.7);
   }
   75.01% {
-    box-shadow: inset -24px -20px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -24px -20px 15px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
   }
 }
 .scaled.view-2D #earth .planet,
 .scaled.view-3D #earth .planet {
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
 }
 
 #earth .orbit .pos {
@@ -873,27 +889,27 @@ dl.infos dd span:after {
 
 @keyframes shadow-mars {
   0% {
-    box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.7);
   }
   25% {
-    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.7);
   }
   75% {
-    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 0 2px rgba(0, 0, 0, 0.7);
   }
   99.99% {
-    box-shadow: inset 18px -10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 18px -10px 10px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -18px -10px 10px rgba(0, 0, 0, 0.7);
   }
 }
 .scaled.view-2D #mars .planet,
 .scaled.view-3D #mars .planet {
-  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.7);
 }
 
 #jupiter .pos {
@@ -907,27 +923,27 @@ dl.infos dd span:after {
 
 @keyframes shadow-jupiter {
   0% {
-    box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.7);
   }
   25% {
-    box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.7);
   }
   75% {
-    box-shadow: inset 94px -30px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 94px -30px 40px rgba(0, 0, 0, 0.7);
   }
   75.01% {
-    box-shadow: inset -94px -30px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -94px -30px 40px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.7);
   }
 }
 .scaled.view-2D #jupiter .planet,
 .scaled.view-3D #jupiter .planet {
-  box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -16px 0 5px rgba(0, 0, 0, 0.7);
 }
 
 #saturn .pos {
@@ -941,7 +957,7 @@ dl.infos dd span:after {
 
 @keyframes shadow-saturn {
   0% {
-    box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.7);
   }
   25% {
     box-shadow: inset 80px -30px 50px rgba(0, 0, 0, 0.5);
