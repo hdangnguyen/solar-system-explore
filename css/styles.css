@@ -288,38 +288,41 @@ body {
 }
 
 body {
-  background-image: url("../assets/Universe.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Universe.jpeg");
+  background-repeat: repeat-x;
   background-size: cover;
   background-attachment: fixed;
 }
-body #galaxy {
-  background-color: rgba(0, 0, 0, 0.581);
-}
 
 #sun {
-  background-image: url("../assets/Sun.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Sun.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
 }
 
 #mercury .planet {
-  background-image: url("../assets/Mercury.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Mercury.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #venus .planet {
-  background-image: url("../assets/Venus.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Venus.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #saturn .planet {
-  background-image: url("../assets/Saturn.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Saturn.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #earth .planet {
-  background-image: url("../assets/Earth.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Earth.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 .moon {
@@ -327,23 +330,39 @@ body #galaxy {
 }
 
 #mars .planet {
-  background-image: url("../assets/Mars.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Mars.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #uranus .planet {
-  background-image: url("../assets/Uranus.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Uranus.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #jupiter .planet {
-  background-image: url("../assets/Jupiter.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Jupiter.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 #neptune .planet {
-  background-image: url("../assets/Neptune.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/Neptune.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+@keyframes spinAround {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2048px 0;
+  }
+}
+#sun {
+  animation: spinAround 50s linear infinite;
 }
 
 #mercury .pos,
