@@ -29,8 +29,8 @@ body {
   transform-style: preserve-3d;
 }
 
-.spin,
-.orbit {
+.orbit,
+.spin {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +45,7 @@ body {
   animation-timing-function: linear;
 }
 
-.spin .orbit {
+.orbit .orbit {
   animation-name: suborbit;
 }
 
