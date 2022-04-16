@@ -10,7 +10,7 @@ body {
 }
 #sun {
   @include planet-size(Sun);
-  box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
+  box-shadow: 0 0 200px rgba(255, 161, 60, 0.501);
 }
 #mercury .planet {
   @include planet-size(Mercury);
@@ -49,8 +49,5 @@ body {
   }
 }
 #sun {
-  animation: spinAround 50s linear infinite;
-}
-.spin {
   animation: spinAround 50s linear infinite;
 }

@@ -36,9 +36,6 @@ body {
   transform-style: preserve-3d;
 }
 .orbit {
-  animation: spinAround 50s linear infinite;
-}
-.spin {
   animation-name: orbit;
   animation-iteration-count: infinite;
   animation-timing-function: linear;

@@ -40,10 +40,6 @@ body {
 }
 
 .orbit {
-  animation: spinAround 50s linear infinite;
-}
-
-.spin {
   animation-name: orbit;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -300,7 +296,7 @@ body {
   background-image: url("../assets/Sun.jpeg");
   background-repeat: repeat-x;
   background-size: cover;
-  box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
+  box-shadow: 0 0 200px rgba(255, 161, 60, 0.501);
 }
 
 #mercury .planet {
@@ -364,10 +360,6 @@ body {
   }
 }
 #sun {
-  animation: spinAround 50s linear infinite;
-}
-
-.spin {
   animation: spinAround 50s linear infinite;
 }
 
