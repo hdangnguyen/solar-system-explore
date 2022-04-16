@@ -70,14 +70,14 @@ dl.infos dd span:after {
   transform: rotateX(0deg);
 }
 
-.mercury #mercury.orbit,
-.venus #venus.orbit,
-.earth #earth.orbit,
-.mars #mars.orbit,
-.jupiter #jupiter.orbit,
-.saturn #saturn.orbit,
-.uranus #uranus.orbit,
-.neptune #neptune.orbit {
+.mercury #mercury.spin,
+.venus #venus.spin,
+.earth #earth.spin,
+.mars #mars.spin,
+.jupiter #jupiter.spin,
+.saturn #saturn.spin,
+.uranus #uranus.spin,
+.neptune #neptune.spin {
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 

@@ -45,7 +45,7 @@ body {
   animation-timing-function: linear;
 }
 
-.orbit .orbit {
+.spin .orbit {
   animation-name: suborbit;
 }
 
@@ -363,10 +363,6 @@ body {
   animation: spinAround 50s linear infinite;
 }
 
-.spin {
-  animation: spinAround 50s linear infinite;
-}
-
 #mercury .pos,
 #mercury .planet,
 #mercury.orbit {
@@ -461,63 +457,63 @@ body {
   font-size: 5.1em;
 }
 
-#mercury.orbit {
+#mercury.spin {
   width: 32em;
   height: 32em;
   margin-top: calc(-32em/ 2);
   margin-left: calc(-32em/ 2);
 }
 
-#venus.orbit {
+#venus.spin {
   width: 40em;
   height: 40em;
   margin-top: calc(-40em/ 2);
   margin-left: calc(-40em/ 2);
 }
 
-#earth.orbit {
+#earth.spin {
   width: 56em;
   height: 56em;
   margin-top: calc(-56em/ 2);
   margin-left: calc(-56em/ 2);
 }
 
-#earth .orbit {
+#earth .spin {
   width: 6em;
   height: 6em;
   margin-top: calc(-6em/ 2);
   margin-left: calc(-6em/ 2);
 }
 
-#mars.orbit {
+#mars.spin {
   width: 72em;
   height: 72em;
   margin-top: calc(-72em/ 2);
   margin-left: calc(-72em/ 2);
 }
 
-#jupiter.orbit {
+#jupiter.spin {
   width: 105em;
   height: 105em;
   margin-top: calc(-105em/ 2);
   margin-left: calc(-105em/ 2);
 }
 
-#saturn.orbit {
+#saturn.spin {
   width: 140em;
   height: 140em;
   margin-top: calc(-140em/ 2);
   margin-left: calc(-140em/ 2);
 }
 
-#uranus.orbit {
+#uranus.spin {
   width: 166em;
   height: 166em;
   margin-top: calc(-166em/ 2);
   margin-left: calc(-166em/ 2);
 }
 
-#neptune.orbit {
+#neptune.spin {
   width: 190em;
   height: 190em;
   margin-top: calc(-190em/ 2);
@@ -749,14 +745,14 @@ dl.infos dd span:after {
   transform: rotateX(0deg);
 }
 
-.mercury #mercury.orbit,
-.venus #venus.orbit,
-.earth #earth.orbit,
-.mars #mars.orbit,
-.jupiter #jupiter.orbit,
-.saturn #saturn.orbit,
-.uranus #uranus.orbit,
-.neptune #neptune.orbit {
+.mercury #mercury.spin,
+.venus #venus.spin,
+.earth #earth.spin,
+.mars #mars.spin,
+.jupiter #jupiter.spin,
+.saturn #saturn.spin,
+.uranus #uranus.spin,
+.neptune #neptune.spin {
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
@@ -1123,7 +1119,7 @@ dl.infos dd span:after {
 }
 
 #solar-system,
-.orbit,
+.spin,
 .planet,
 .satelite,
 .ring {
@@ -1137,7 +1133,7 @@ dl.infos dd span:after {
 
 #solar-system,
 #sun,
-.orbit,
+.spin,
 .pos,
 .planet,
 .satelite,
@@ -1162,7 +1158,7 @@ dl.infos dd span:after {
 
 .opening #solar-system,
 .opening #sun,
-.opening .orbit,
+.opening .spin,
 .opening .pos,
 .opening .planet,
 .opening .satelite,
