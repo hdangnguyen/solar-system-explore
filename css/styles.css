@@ -1,5 +1,5 @@
 body {
-  font-size: 11px;
+  font-size: 13px;
   font-family: "Helvetica", sans-serif;
   font-weight: 300;
   background-color: #08090a;
@@ -15,43 +15,42 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#universe #galaxy {
+
+#galaxy {
   position: relative;
   width: 100%;
   height: 100%;
 }
-#universe #solar-system {
+
+#solar-system {
   position: absolute;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
 }
-#universe #solar-system .orbit {
+
+.orbit,
+.spin {
   position: absolute;
   top: 50%;
   left: 50%;
   border: 2px solid rgba(255, 255, 255, 0.096);
   border-radius: 50%;
   transform-style: preserve-3d;
-  animation: orbit linear infinite;
 }
-#universe #solar-system .orbit .pos {
-  position: absolute;
-  transform-style: preserve-3d;
-  animation: invert infinite linear;
+
+.orbit {
+  animation: spinAround 50s linear infinite;
 }
-#universe #solar-system #sun,
-#universe #solar-system .planet,
-#universe #solar-system #earth .moon {
-  position: absolute;
-  width: 1em;
-  top: 50%;
-  left: 50%;
-  height: 1em;
-  border-radius: 50%;
-  transform-style: preserve-3d;
-  margin-top: -0.5em;
-  margin-left: -0.5em;
+
+.spin {
+  animation-name: orbit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.orbit .orbit {
+  animation-name: suborbit;
 }
 
 .pos {
@@ -304,7 +303,7 @@ body {
   box-shadow: 0 0 200px rgba(255, 161, 60, 0.63);
 }
 
-#mercury {
+#mercury .planet {
   background-image: url("../assets/Mercury.jpeg");
   background-repeat: repeat-x;
   background-size: cover;
@@ -368,7 +367,7 @@ body {
   animation: spinAround 50s linear infinite;
 }
 
-#mercury {
+.spin {
   animation: spinAround 50s linear infinite;
 }
 
