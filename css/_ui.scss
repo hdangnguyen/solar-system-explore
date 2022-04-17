@@ -1,18 +1,11 @@
 @import "_fonts";
 h1 {
   width: 100%;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 32px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Helvetica Neue";
-}
-h1 {
-  width: 100%;
-  font-weight: 600;
-  font-size: 14px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: "MonumentExtended";
 }
 
 #navbar,
@@ -46,7 +39,7 @@ h1 {
   color: #fff;
 }
 #data a.active {
-  color: #0cf;
+  color: #df9100;
 }
 
 #navbar a {
@@ -61,7 +54,7 @@ h1 {
   left: 0;
 }
 #toggle-controls {
-  right: 0;
+  right: 2em;
 }
 
 #data,
