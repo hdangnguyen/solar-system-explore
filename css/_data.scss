@@ -110,31 +110,31 @@ $s-neptune: 164.79132;
   margin-left: calc(-#{$distance}/ 2);
 }
 
-#mercury.spin {
+#mercury.orbit {
   @include stretchedOrbit(32em);
 }
-#venus.spin {
+#venus.orbit {
   @include stretchedOrbit(40em);
 }
-#earth.spin {
+#earth.orbit {
   @include stretchedOrbit(56em);
 }
-#earth .spin /* Moon */ {
+#earth .orbit /* Moon */ {
   @include stretchedOrbit(6em);
 }
-#mars.spin {
+#mars.orbit {
   @include stretchedOrbit(72em);
 }
-#jupiter.spin {
+#jupiter.orbit {
   @include stretchedOrbit(105em);
 }
-#saturn.spin {
+#saturn.orbit {
   @include stretchedOrbit(140em);
 }
-#uranus.spin {
+#uranus.orbit {
   @include stretchedOrbit(166em);
 }
-#neptune.spin {
+#neptune.orbit {
   @include stretchedOrbit(190em);
 }
 
